@@ -56,8 +56,31 @@ var questionObj = [
       },
 ]
 
-//populating questions to html
 
+
+//populating questions to html
+function popQue (){
+question = (questionObj[0].question);
+$('#question').append(question);
+console.log(question);
+
+if (question === questionObj[0].question){
+  answer1 = (questionObj[0].answers.a);
+  answer2 = (questionObj[0].answers.b);
+  answer3 = (questionObj[0].answers.c);
+  answer4 = (questionObj[0].answers.d);
+  
+  $('#firstan').append(answer1);
+  $('#secondan').append(answer2);
+  $('#thirdan').append(answer3);
+  $('#fourthan').append(answer4);
+}
+
+
+
+}
+
+popQue();
 //creating timer 
 
 //capturing wins and losses
