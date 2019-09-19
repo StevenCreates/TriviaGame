@@ -2,3 +2,9 @@
     width: 1233 !important;
     margin-top: 9%;
 }
+
+.btn {
+    margin: 6px !important;
+    /* background: #18ba8f !important;
+    border: #18ba8f !important; */
+}

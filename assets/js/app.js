@@ -9,6 +9,10 @@ var answer2;
 var answer3;
 var answer4;
 var correctAnswer;
+var asel;
+var bsel;
+var csel;
+var dsel;
 
 //creating questions
 
@@ -69,19 +73,34 @@ if (question === questionObj[0].question){
   answer2 = (questionObj[0].answers.b);
   answer3 = (questionObj[0].answers.c);
   answer4 = (questionObj[0].answers.d);
-  
+  correctAnswer = (questionObj[0].correctAnswer);
+
   $('#firstan').append(answer1);
   $('#secondan').append(answer2);
   $('#thirdan').append(answer3);
   $('#fourthan').append(answer4);
 }
+if (correctAnswer === "a"){
+  $('#firstan').addClass("correct");
 
-
+}
+else if (correctAnswer === "b"){
+  $('#secondan').addClass("correct");
+}
+else if (correctAnswer === "c"){
+  $('#thirdan').addClass("correct");
+}
+else if (correctAnswer === "d"){
+  $('#fourthan').addClass("correct");
+}
 
 }
 
+console.log(correctAnswer);
+
 popQue();
 //creating timer 
+
 
 //capturing wins and losses
 
