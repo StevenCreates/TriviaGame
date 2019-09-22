@@ -170,6 +170,7 @@ $(document).ready(function () {
 
   function timeoutError() {
     alert("Took To Long Try Again");
+    location.reload();
   }
 
 

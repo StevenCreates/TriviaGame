@@ -19,3 +19,10 @@ body {
     background-size: cover;
 
 }
+
+#timerdiv {
+    font-size: 21px;
+    padding: auto;
+    color: red;
+    margin: 3px;
+}
