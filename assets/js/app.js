@@ -27,7 +27,6 @@ var questionObj = [
         },
         correctAnswer: "a"
       },
-
       {
         question: "What is a flock of crows called?",
         answers: {
@@ -64,16 +63,23 @@ var questionObj = [
 
 //populating questions to html
 function popQue (){
-question = (questionObj[0].question);
+
+
+$( ".btn" ).click(function() {
+var i = 0;
+i++
+  
+question = (questionObj[i].question);
 $('#question').append(question);
 console.log(question);
+  
 
-if (question === questionObj[0].question){
-  answer1 = (questionObj[0].answers.a);
-  answer2 = (questionObj[0].answers.b);
-  answer3 = (questionObj[0].answers.c);
-  answer4 = (questionObj[0].answers.d);
-  correctAnswer = (questionObj[0].correctAnswer);
+if (question === questionObj[i].question){
+  answer1 = (questionObj[i].answers.a);
+  answer2 = (questionObj[i].answers.b);
+  answer3 = (questionObj[i].answers.c);
+  answer4 = (questionObj[i].answers.d);
+  correctAnswer = (questionObj[i].correctAnswer);
 
   $('#firstan').append(answer1);
   $('#secondan').append(answer2);
@@ -93,13 +99,39 @@ else if (correctAnswer === "c"){
 else if (correctAnswer === "d"){
   $('#fourthan').addClass("correct");
 }
+console.log(correctAnswer);
+
+
+$( ".correct" ).click(function() {
+  alert( "You Guessed it!" );
+
+});
+});
 
 }
 
-console.log(correctAnswer);
 
 popQue();
+
+
 //creating timer 
+var timeLeft = 30;
+var elem = document.getElementById('timerdiv');
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+        timeoutError();
+    } else {
+        elem.innerHTML = timeLeft;
+        timeLeft--;
+    }
+}
+
+function timeoutError() {
+    alert("Took To Long Try Again");
+}
 
 
 //capturing wins and losses
