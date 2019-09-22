@@ -85,7 +85,7 @@ $(document).ready(function () {
 
       if (i === 5) {
         $(".jumbotron").empty();
-        $("#results").append("You Got "+ correctArray + " Correct out of 4")
+        $("#results").append("Congrats! You Got "+ correctArray + " Correct out of 4")
 
       }
 

@@ -12,6 +12,8 @@
 #results {
     border: black 15px solid;
     text-align: center;
+    font-size: 21px;
+    color: white;
 }
 
 body {
