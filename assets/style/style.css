@@ -8,3 +8,14 @@
     /* background: #18ba8f !important;
     border: #18ba8f !important; */
 }
+
+#results {
+    border: black 15px solid;
+    text-align: center;
+}
+
+body {
+    background: url(../images/background.jpg);
+    background-size: cover;
+
+}
